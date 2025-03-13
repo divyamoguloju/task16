@@ -1,0 +1,83 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease;
+}
+
+.content {
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+#workList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow-y: auto;
+    color: white;
+}
+
+#workList li {
+    padding: 15px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+#workList li:hover {
+    background-color: #444;
+}
+
+/* Title Styles */
+#workTitle {
+    font-size: 24px;
+    margin-top: 10px;
+    text-align: center;
+    color: #333;
+}
+
+/* Project Frame Styles */
+#projectFrame {
+    display: none;
+    width: 100%;
+    height: 100%;
+    border: none;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+.main-content.visible {
+    margin-left: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #workList {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    #projectFrame {
+        width: 100%;
+        height: 500px;
+    }
+}
